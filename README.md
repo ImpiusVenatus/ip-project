@@ -37,3 +37,20 @@ Example:
 ```
 
 Using the BEM naming convention helps maintain a clear structure, enhances code readability, and makes CSS classes more predictable and reusable within your project.
+
+# Project Setup
+
+```
+git clone https://github.com/ImpiusVenatus/ip-project
+cd ip-project
+git checkout -b <branch-name>
+npm install
+npm run dev
+```
+After making changes,
+```
+git add .
+git commit -m "Commit-Message"
+git push origin <branch-name>
+```
+
