@@ -1,0 +1,141 @@
+.header{
+    width: 100%;
+    box-shadow: 1px 4px 7px -1px rgba(0,0,0,0.14);
+    -webkit-box-shadow: 1px 4px 7px -1px rgba(0,0,0,0.14);
+    -moz-box-shadow: 1px 4px 7px -1px rgba(0,0,0,0.14);
+    z-index: 1000;
+}
+
+.container{
+    max-width: 1320px;
+    margin: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    font-size: 24px;
+    font-weight: 700;
+    color: #254D3B;
+    font-family: var(--font-name);
+}
+
+.logo img{
+    width: 30%;
+}
+
+.nav_wrapper{
+    margin-top: -1px !important;
+}
+
+.nav_wrapper ul{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.nav_item {
+    color: #000;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    padding: .4rem .8rem;
+}
+
+.nav_links{
+    display: flex;
+    gap: 2rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav_item::after {
+    content: '';
+    position: absolute;
+    width:  100%;
+    transform: scaleX(0);
+    height:  2px;
+    bottom:  0;
+    left:  0;
+    background-color: #254D3B;
+    transform-origin: bottom right;
+    transition: transform  0.25s ease-out;
+  }
+  
+  .nav_item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .active_link .nav_item {
+    color: #fff;
+    background-color: #254D3B;
+  }
+
+.sticky_header{
+    width: 100%;
+    background: #072F34;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 8px -3px #838383;
+    z-index: 999;
+}
+
+.sticky_header_link .nav_item,.sticky_header .logo a{
+    color: #ffffff;
+   }
+
+ .sticky_header .nav_item::after {
+    background-color: #fff;
+  }
+
+  .sticky_header .active_link .nav_item{
+    background-color: #fff;
+    color: #254D3B;
+  }
+
+.username{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #254D3B;
+    padding-inline: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    border-bottom-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    margin-top: -1px;
+}
+
+.loginBtn{
+    background-color: var(--secondary-color);
+    margin-top: -1px;
+    transition: 0.3s ease-in-out;
+    border: 1px solid transparent;
+    padding: 0.4rem 0.8rem;
+}
+.loginbtn:hover{
+    border: 1px solid #0B2727;
+}
+.hamburger-icon{
+    display: none;
+}
+/*Responsive CSS*/
+@media only screen and (max-width:992px) {
+    .navigation{
+        display: none;
+    }
+    .hamburger-icon{
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width:768px) {
+}
